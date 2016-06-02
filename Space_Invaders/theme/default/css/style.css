@@ -1,0 +1,43 @@
+#stage{
+    background-color: black;
+
+}
+#stat{
+    background-color:blue;
+
+}
+#alienBlock{
+   
+
+
+}
+.alienA, .alienB, .alienC, .alienD{
+    margin: 1%;
+    width:5%;
+    height:5%;
+}
+.alienA{
+  background-image: url("../img/enemy/alien1.svg");
+  background-repeat: no-repeat;
+  
+}
+.alienB{
+  background-image: url(theme/default/img/alien2.svg);
+  background-color:green;
+}
+.alienC{
+  background-image: url(theme/default/img/alien3.svg);
+  background-color:white;
+}
+.alienD{
+  background-image: url(theme/default/img/alien4.svg);
+  background-color:orange;
+}
+
+#shipBlock{
+    background-color:blue;
+}
+#ship{
+    background-color:green;
+    width:15%;
+}

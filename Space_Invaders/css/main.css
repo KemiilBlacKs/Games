@@ -1,0 +1,56 @@
+body, span, img {
+	margin: 0;
+	padding: 0;
+}
+
+#home, #pause, #victory, #gameOver {
+	display: none;
+}
+
+#stat{
+	width: 60%;
+	height: 15%;
+	margin: 0 auto;
+}
+
+#stage{
+	height: 100%;
+}
+
+#gameBlock{
+	height: 85%;
+}
+
+#ship{
+	width: 7%; /*Mouhammad*/
+	transition: .3s ease-in-out;
+}
+
+#shipBlock{
+	height: 10%;
+}
+
+#alienBlock{
+	text-align: center;
+	margin: 0 auto;
+	width: 60%;
+}
+
+#ligneA, #ligneB, #ligneC, #ligneD {
+
+}
+
+.alienA, .alienB, .alienC, .alienD{
+	display: inline-block;
+	width: 6%;
+}
+
+#shot {
+	margin-left: 5%;
+	width: 5px;
+	height: 10px;
+	position: absolute;
+	background-color: red;
+	bottom:0%;
+	right:50%;
+}

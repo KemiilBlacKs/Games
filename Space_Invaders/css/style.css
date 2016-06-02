@@ -1,0 +1,124 @@
+body{
+	margin:0;
+	color: white;
+	background-color: black;
+}
+
+/* debut de stat */
+#stat{
+	position: fixed;
+	width: 99.8%;
+	height: 6%;
+	border: solid 1px blue;
+}
+
+#logo{
+	position: fixed;
+	left:60%;
+	top:0.5%;
+	height: auto;
+	width: 20%;
+	border: solid 1px red;
+}
+
+/*
+#pause{
+	position: fixed;
+	left:2%;
+	top:0.5%;
+	width: 5%;
+	height: 5%;
+	border: solid 1px red;
+}
+
+#start{
+	position: fixed;
+	left:8.1%;
+	top:0.5%;
+	width: 5%;
+	height: 5%;
+	border: solid 1px red;
+}
+*/
+
+#score{
+	position:fixed;
+	left:44%;
+	top:0.5%;
+	width: 12%;
+	height: 5%;
+	border: solid 1px red;
+}
+/* fin de stat */
+
+/*  block alien */
+#alienArea{
+	position: fixed;
+	top:6.3%;
+	width: 95%;
+	height: 80%;
+	margin-left: 2.5%;
+	margin-right:2.5%;
+	border: solid 1px pink;
+	overflow: hidden;
+}
+
+#alienBlock{
+	float: left;
+	margin-left:15%;
+	margin-right:15%;
+	width: 70%;
+	height: 40%;	
+}
+
+/*  div alien */
+
+#alienBlock div{
+	display: inline-block;
+	float: left;
+	width: 8%;
+	margin: 1%;
+	}
+	
+#alienBlock img{
+	display: block;
+    margin: auto;
+	width: 50%;	
+}
+
+/*  block ship */
+
+#shipBlock{
+	position: fixed;
+	top:86.5%;
+	height: 12%;
+	width: 95%;
+	}
+
+#ship{
+	float: left;
+	margin-left: 47.5%;
+	margin-right:47.5%;
+	height:100%;
+	width: 5%;
+}
+
+#ship img{
+	display: block;
+    margin: auto;
+	height:100%;
+	width: 100%;
+	z-index: 10;
+}
+
+#shot{
+ 	position: absolute;
+ 	border: solid 1.5px  #fff;
+ 	height: 10%;
+ 	margin-left: 50px;
+	z-index: 1;
+}
+
+
+
+

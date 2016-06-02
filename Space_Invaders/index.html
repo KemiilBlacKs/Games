@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Space Invaders Project" >
+        <meta name="keywords" content="Space Invaders, acs2016, Momo">
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <title>Unicorn Invaders</title>
+    </head>
+    <body>
+
+
+        <div id="stage"> <!-- ECRAN EN JEU -->
+
+            <div id="stat">
+                <div id="score" class="score">
+                    <span>score:</span><div onchange="getScore()"></div>
+                    <img src="" alt="logo" id="logo">
+                </div>
+            </div>
+
+            <!-- DEBUT DU GAMEBLOCK -->
+            <div id="alienArea">
+
+                <div id="alienBlock">
+
+            <!-- Ligne Alien A -->
+
+                    <div id="alienA0" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+                    <div id="alienA1" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+                    <div id="alienA2" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+                    <div id="alienA3" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+                    <div id="alienA4" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+                    <div id="alienA5" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+                    <div id="alienA6" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+                    <div id="alienA7" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+                    <div id="alienA8" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+                    <div id="alienA9" class="alienA"><img src="theme/default/img/enemy/alienA.svg" alt="alien"></div>
+           
+            <!--Fin de AlienA9 -->
+
+            <!--Ligne Alien B-->
+
+                    <div id="alienB0" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+                    <div id="alienB1" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+                    <div id="alienB2" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+                    <div id="alienB3" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+                    <div id="alienB4" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+                    <div id="alienB5" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+                    <div id="alienB6" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+                    <div id="alienB7" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+                    <div id="alienB8" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+                    <div id="alienB9" class="alienB"><img src="theme/default/img/enemy/alienB.svg" alt="alien"></div>
+           
+            <!--Fin de AlienB9 -->
+
+            <!-- Ligne Alien C -->
+                    <div id="alienC0" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+                    <div id="alienC1" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+                    <div id="alienC2" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+                    <div id="alienC3" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+                    <div id="alienC4" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+                    <div id="alienC5" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+                    <div id="alienC6" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+                    <div id="alienC7" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+                    <div id="alienC8" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+                    <div id="alienC9" class="alienC"><img src="theme/default/img/enemy/alienC.svg" alt="alien"></div>
+           
+            <!--Fin de AlienC9 -->
+
+            <!--Ligne Alien D-->
+                    <div id="alienD0" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+                    <div id="alienD1" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+                    <div id="alienD2" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+                    <div id="alienD3" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+                    <div id="alienD4" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+                    <div id="alienD5" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+                    <div id="alienD6" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+                    <div id="alienD7" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+                    <div id="alienD8" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+                    <div id="alienD9" class="alienD"><img src="theme/default/img/enemy/alienD.svg" alt="alien"></div>
+          </div><!--fin de alienBlock-->
+
+              <!-- animations -->
+                <div id="shot"></div>
+              <!-- FIN ANIMIATIONS -->
+
+              <!-- DEBUT SHIPBLOCK -->
+                <div id="shipBlock" >
+
+                    <div id="ship"><img src="theme/default/img/player/ship.svg"></img></div>
+
+                </div><!--fin de shipBlock-->
+
+
+            </div><!--Fin de gameBlock-->
+
+
+
+        </div><!--fin de stage-->
+
+        <script type="text/javascript" src="js/lib.js"></script>
+    </body>
+</html>
