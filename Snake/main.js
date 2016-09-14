@@ -1,11 +1,13 @@
 var snake;
 var apple;
 var snakeGame;
+var turnedThisFrame = false;
 
 
 window.onload = function()
 {
-    snakeGame = new SnakeGame(900, 600, 20, 100);
+    delay = 100;
+    snakeGame = new SnakeGame(900, 600, 20, delay);
     snake = new Snake([[6,4], [5,4], [4,4], [3, 4], [2, 4]], "right");
     apple = new Apple([10, 10]);
     //snakeGame.init(snake, apple);
@@ -15,36 +17,45 @@ window.onload = function()
 //Direction avec le clavier
 document.onkeydown = function handleKeyDown(e)
 {
-    var key = e.keyCode;
-    var newDirection;
-    switch(key) //Attribution des entrées clavier pour la direction et restart
-    {
-        case 13:
-            snake = new Snake([[6,4], [5,4], [4,4], [3, 4], [2, 4]], "right");
-            apple = new Apple([10, 10]);
-            snakeGame.init(snake, apple);
-            return;
-        case 37:
-            newDirection = "left";
-            break;
-        case 38:
-            newDirection = "up";
-            break;
-        case 39:
-            newDirection = "right";
-            break;
-        case 40:
-            newDirection = "down";
-            break;
-        case 32:
-            snake = new Snake([[6,4], [5,4], [4,4], [3, 4], [2, 4]], "right");
-            apple = new Apple([10, 10]);
-            snakeGame.init(snake, apple);
-            return;
-        default:
-            return;
-    }
-    snakeGame.snake.setDirection(newDirection);
+        var key = e.keyCode;
+        var newDirection;
+
+        
+        // Check if snake already turned on this frame
+        if (!turnedThisFrame) 
+        {
+            switch(key) //Attribution des entrées clavier pour la direction et restart
+            {
+                case 13:
+                    snake = new Snake([[6,4], [5,4], [4,4], [3, 4], [2, 4]], "right");
+                    apple = new Apple([10, 10]);
+                    snakeGame.init(snake, apple);
+                    return;
+                case 37:
+                    newDirection = "left";
+                    break;
+                case 38:
+                    newDirection = "up";
+                    break;
+                case 39:
+                    newDirection = "right";
+                    break;
+                case 40:
+                    newDirection = "down";
+                    break;
+                case 32:
+                    snake = new Snake([[6,4], [5,4], [4,4], [3, 4], [2, 4]], "right");
+                    apple = new Apple([10, 10]);
+                    snakeGame.init(snake, apple);
+                    return;
+                default:
+                    return;
+            }
+            snakeGame.snake.setDirection(newDirection);
+
+            //set turned to true, block the sneak from self eating
+            turnedThisFrame = true;
+        }
 }
 
 
@@ -106,7 +117,9 @@ function SnakeGame(canvasWidth, canvasHeight, blockSize, delay)
     
     //Raffraichissement du canvas pour faire avancé le serpent
     var refreshCanvas = function()
-    {
+    {   
+        //On refresh, set turned to false. Snake can now turn !
+        turnedThisFrame = false;
         instance.snake.advance();
         if(instance.checkCollision())
         {
